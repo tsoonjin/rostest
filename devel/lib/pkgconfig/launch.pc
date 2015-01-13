@@ -1,0 +1,8 @@
+prefix=/home/papa/Project/rostest/devel
+
+Name: launch
+Description: Description of launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/papa/Project/rostest/devel/lib 
+Requires: 

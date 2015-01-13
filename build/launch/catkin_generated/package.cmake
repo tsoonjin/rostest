@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "launch")
+set(launch_MAINTAINER "papa <papa@todo.todo>")
+set(launch_DEPRECATED "")
+set(launch_VERSION "0.0.0")
+set(launch_BUILD_DEPENDS "roscpp" "rospy")
+set(launch_RUN_DEPENDS "roscpp" "rospy")
+set(launch_BUILDTOOL_DEPENDS "catkin")

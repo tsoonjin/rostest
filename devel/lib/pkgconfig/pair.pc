@@ -1,0 +1,8 @@
+prefix=/home/papa/Project/rostest/devel
+
+Name: pair
+Description: Description of pair
+Version: 0.0.0
+Cflags: -I/home/papa/Project/rostest/devel/include
+Libs: -L/home/papa/Project/rostest/devel/lib 
+Requires: 

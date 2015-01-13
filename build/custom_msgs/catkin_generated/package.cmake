@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "custom_msgs")
+set(custom_msgs_MAINTAINER "papa <papa@todo.todo>")
+set(custom_msgs_DEPRECATED "")
+set(custom_msgs_VERSION "0.0.0")
+set(custom_msgs_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "actionlib_msgs")
+set(custom_msgs_RUN_DEPENDS "roscpp" "rospy" "std_msgs" "actionlib_msgs")
+set(custom_msgs_BUILDTOOL_DEPENDS "catkin")

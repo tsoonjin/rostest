@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pair")
+set(pair_MAINTAINER "papa <papa@todo.todo>")
+set(pair_DEPRECATED "")
+set(pair_VERSION "0.0.0")
+set(pair_BUILD_DEPENDS "roscpp" "rospy")
+set(pair_RUN_DEPENDS "roscpp" "rospy")
+set(pair_BUILDTOOL_DEPENDS "catkin")

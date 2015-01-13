@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="configure" pkg="pair" type="configure">
+  <param name="red_threshold" type="int" value="0" />
+  <param name="input_name" type="str" value="God" />
+  <param name="is_finish" type="bool" value="False" />
+</node>
+\endverbatim
+
