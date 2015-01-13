@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xacro:include filename="$(find description)/urdf/testbot.gazebo" />
+<xacro:include filename="$(find description)/urdf/materials.xacro" />
+<xacro:include filename="$(find description)/urdf/macros.xacro" />
+<!-- Propeties -->
+<xacro:property name="PI" value="3.1415926535897931"/>
+
+<xacro:property name="chassisHeight" value="0.1"/>
+<xacro:property name="chassisLength" value="0.4"/>
+<xacro:property name="chassisWidth" value="0.2"/>
+<xacro:property name="chassisMass" value="50"/>
+
+<xacro:property name="casterRadius" value="0.05"/>
+<xacro:property name="casterMass" value="5"/>
+
+<xacro:property name="wheelWidth" value="0.05"/>
+<xacro:property name="wheelRadius" value="0.1"/>
+<xacro:property name="wheelPos" value="0.2"/>
+<xacro:property name="wheelMass" value="5"/>
+
+<xacro:property name="cameraSize" value="0.05"/>
+<xacro:property name="cameraMass" value="0.1"/>
+<robot name="testbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- This is a dummy bot -->
+<link name='chassis'>
+  <collision> 
+    <origin xyz="0 0 ${wheelRadius}" rpy="0 0 0"/> 
+    <geometry> 
+      <box size="${chassisLength} ${chassisWidth} ${chassisHeight}"/> 
+    </geometry> 
+  </collision>
+  <visual> 
+    <origin xyz="0 0 ${wheelRadius}" rpy="0 0 0"/> 
+    <geometry> 
+      <box size="${chassisLength} ${chassisWidth} ${chassisHeight}"/> 
+    </geometry> 
+    <material name="orange"/>
+  </visual>
+  <inertial> 
+    <origin xyz="0 0 ${wheelRadius}" rpy="0 0 0"/> 
+    <mass value="${chassisMass}"/> 
+    <box_inertia m="${chassisMass}" x="${chassisLength}" y="${chassisWidth}" z="${chassisHeight}"/>
+  </inertial>
+</link>
+</robot>

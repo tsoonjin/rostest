@@ -1,0 +1,12 @@
+---
+#example of list
+gaussian:
+    - size
+    - sigmaX
+    - sigmaY
+
+#example of dict
+ann:
+    {name: kabu, type: mami}
+
+...
