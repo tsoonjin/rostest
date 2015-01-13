@@ -1,0 +1,11 @@
+guid: 000a4701120ac458
+video_mode: 640x480_yuv411
+frame_rate: 7
+brightness: 16
+auto_exposure: 1
+shutter: 1843
+hue: 128
+saturation: 256
+gamma: 0
+gain: 0
+auto_white_balance: 2

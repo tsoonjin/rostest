@@ -1,0 +1,36 @@
+<launch>
+  <!--<include file="$(find vision)/launch/front_camera.launch"/>-->
+  <!--<include file="$(find vision)/launch/bot_camera.launch"/>-->
+  <arg name="camera" default="front" />
+  <arg name="camera2" default="bot" />
+  
+  <node pkg="camera1394" type="camera1394_node" name="bot_camera" ns="bottomcam">
+    <rosparam file="$(find vision)/launch/$(arg camera2).yaml" />
+	<param name="frame_rate" value="15"/>
+	<param name="iso_speed" value="400"/>
+	<param name="camera_info_url" value="package://vision/launch/bot_calibration.yaml"/>
+	<param name="frame_id" value="botty" />
+	<param name="auto_white_balance" value="2"/>
+	<param name="shutter" value="123"/>
+	
+  </node>
+  
+    <node pkg="camera1394" type="camera1394_node" name="front_camera" ns="frontcam">
+    <rosparam file="$(find vision)/launch/$(arg camera).yaml" />
+	<param name="frame_rate" value="15"/>
+	<param name="iso_speed" value="400"/>
+	<param name="camera_info_url" value="package://vision/launch/front_calibration.yaml"/>
+	<param name="frame_id" value="frontty" />
+	<param name="exposure" value="125.0"/>
+	<param name="hue" value="128"/>
+	<param name="saturation" value="256"/>
+	<param name="shutter" value="123"/>
+  </node>
+  
+  <node pkg="image_proc" type="image_proc" name="front_camera_image_proc" ns="bottomcam/camera">
+  </node>
+  <node pkg="image_proc" type="image_proc" name="bot_camera_image_proc" ns="frontcam/camera">
+  </node>
+  
+</launch>
+

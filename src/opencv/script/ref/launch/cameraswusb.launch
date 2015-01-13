@@ -1,0 +1,19 @@
+<launch>
+  <include file="$(find vision)/launch/front_usb_cam.launch"/>
+  <include file="$(find vision)/launch/bot_usb_cam.launch"/>
+  
+  <node pkg="image_proc" type="image_proc" name="front_camera_image_proc" ns="front_camera/camera">
+  </node> 
+  <node pkg="image_proc" type="image_proc" name="bot_camera_image_proc" ns="bot_camera/camera">
+  </node>
+  
+  <node pkg="image_transport" type="republish" name="image_filter" ns="Vision" output="screen" args="raw in:=image_filter compressed out:=image_filter">
+  </node>
+  
+  <!--dynamic reconfigure to 40% -->
+  <node name="camera_configure" pkg="dynamic_reconfigure" type="dynparam" args="set_from_parameters Vision/image_filter/compressed">
+  	<param name="jpeg_quality" type="int" value="40" />
+  </node>
+  
+</launch>
+

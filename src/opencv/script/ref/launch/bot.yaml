@@ -1,0 +1,11 @@
+guid: 000a47010f0ab48b
+video_mode: 1280x960_mono8
+frame_rate: 7
+bayer_pattern: rggb
+bayer_method: Bilinear
+auto_exposure: 50
+auto_white_balance: 2
+auto_shutter: 2
+gain: 0
+
+
